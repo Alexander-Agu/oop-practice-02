@@ -64,8 +64,10 @@ public class LibraryService {
 
             System.out.println("Available Books");
             for (Book book: books){
-                count++;
-                System.out.println("Book " + count + book.getTitle());
+                if (book.isAvailable()) {
+                    count++;
+                    System.out.println("Book " + count + " " + book.getTitle());
+                }
             }
         }
     }
